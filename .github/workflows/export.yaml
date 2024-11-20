@@ -30,8 +30,8 @@ jobs:
       - name: Export
         run: |
           mkdir -p ./export
-          pnpm slidev export -- --per-slide --format pdf --output ./export/${{ github.event.repository.name }}.pdf
-          pnpm slidev export -- --per-slide --with-clicks false --format pptx --output ./export/${{ github.event.repository.name }}.pptx
+          pnpm slidev export --per-slide --format pdf --output ./export/${{ github.event.repository.name }}.pdf
+          pnpm slidev export --per-slide --with-clicks false --format pptx --output ./export/${{ github.event.repository.name }}.pptx
 
       - name: Generate Body
         run: echo "### Please download PDF and PPTX files from the assets section below." > ./export/body.txt
