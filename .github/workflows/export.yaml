@@ -29,7 +29,7 @@ jobs:
       - name: Export
         run: |
           pnpm slidev export --format pdf --output ./${{ github.event.repository.name }}.pdf
-          pnpm slidev export --format pptx --output ./${{ github.event.repository.name }}.pptx
+          pnpm slidev export --format pptx
 
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1.7.2
