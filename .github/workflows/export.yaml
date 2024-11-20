@@ -28,7 +28,7 @@ jobs:
 
       - name: Export
         run: |
-          mkdir -p ./export
+          mkdir -p ./export/;
           pnpm slidev export --format pdf --output ./export/${{ github.event.repository.name }}.pdf
           pnpm slidev export --format pptx --output ./export/${{ github.event.repository.name }}.pptx
 
