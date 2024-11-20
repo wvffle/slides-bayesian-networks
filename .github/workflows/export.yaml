@@ -28,12 +28,8 @@ jobs:
 
       - name: Export
         run: |
-          mkdir -p ./export/;
-          pnpm slidev export --format pdf --output ./export/${{ github.event.repository.name }}.pdf
-          pnpm slidev export --format pptx --output ./export/${{ github.event.repository.name }}.pptx
-
-      - name: Generate Body
-        run: echo "### Please download PDF and PPTX files from the assets section below." > ./export/body.txt
+          pnpm slidev export --format pdf --output ./${{ github.event.repository.name }}.pdf
+          pnpm slidev export --format pptx --output ./${{ github.event.repository.name }}.pptx
 
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1.7.2
@@ -44,9 +40,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: Exports for ${{ github.sha }}
-          body_path: ./export/body.txt
+          body: '### Please download PDF and PPTX files from the assets section below.'
           tag_name: export-${{ github.sha }}
           make_latest: true
           files: |
-            ./export/${{ github.event.repository.name }}.pdf
-            ./export/${{ github.event.repository.name }}.pptx
+            ./${{ github.event.repository.name }}.pdf
+            ./${{ github.event.repository.name }}.pptx
