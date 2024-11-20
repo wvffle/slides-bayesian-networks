@@ -28,8 +28,13 @@ jobs:
 
       - name: Export
         run: |
-          pnpm slidev export --format pdf --output ./${{ github.event.repository.name }}.pdf
+          pnpm slidev export --format pdf
           pnpm slidev export --format pptx
+
+      - name: Rename exported files
+        run: |
+          mv slides-export.pdf ${{ github.event.repository.name }}.pdf
+          mv slides-export.pptx ${{ github.event.repository.name }}.pptx
 
       - name: Create Tag
         uses: rickstaa/action-create-tag@v1.7.2
@@ -39,7 +44,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Exports for ${{ github.sha }}
+          name: Presentation download (${{ github.sha }})
           body: '### Please download PDF and PPTX files from the assets section below.'
           tag_name: export-${{ github.sha }}
           make_latest: true
