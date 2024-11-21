@@ -302,7 +302,7 @@ We could use Bayes theorem once again, or...
 
 <v-click>
 
-  <img src="./venn.png" class="w-1/2" />
+  <img src="/venn.png" class="w-1/2" />
 
 </v-click>
 
@@ -457,8 +457,8 @@ top to bottom direction
 @enduml
 ```
 
-<img src="./apriori-table.png" class="absolute top-56 left-20 w-14" />
-<img src="./aposteriori-table.png" class="absolute top-102 left-13 w-26" />
+<img src="/apriori-table.png" class="absolute top-56 left-20 w-14" />
+<img src="/aposteriori-table.png" class="absolute top-102 left-13 w-26" />
 
 
 
@@ -713,35 +713,35 @@ top to bottom direction
 # Example!
 Example Bayesian Network
 
-<img class="w-full" src="./asia-1.png" />
+<img class="w-full" src="/asia-1.png" />
 
 ---
 
 # Example!
 Let's say that our patient tells us that he is a non-smoker
 
-<img class="w-full" src="./asia-2.png" />
+<img class="w-full" src="/asia-2.png" />
 
 ---
 
 # Example!
 We observe that he has a very short breath
 
-<img class="w-full" src="./asia-3.png" />
+<img class="w-full" src="/asia-3.png" />
 
 ---
 
 # Example!
 We suggest that he should take an XRay image and it turns abnormal
 
-<img class="w-full" src="./asia-4.png" />
+<img class="w-full" src="/asia-4.png" />
 
 ---
 
 # Example!
 Now, we ask him if he's been to Asia this year
 
-<img class="w-full" src="./asia-5.png" />
+<img class="w-full" src="/asia-5.png" />
 
 ---
 layout: center
